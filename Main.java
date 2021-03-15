@@ -15,5 +15,21 @@ public class Main {
         System.out.println(b);
         System.out.println(c);
         System.out.println(str);
+
+        // Basic Operators
+        int x = 5;
+        int y = 27;
+        double z = 56;
+        // int sum = x + y + z;
+        // int multiply = x * y * z;
+
+        double division = z / y;
+        double expon = Math.pow(x, y);
+
+        // System.out.println(sum);
+        // System.out.println(multiply);
+        System.out.println(division);
+        System.out.println(expon);
+
     }
 }
