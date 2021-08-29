@@ -1,5 +1,3 @@
-import java.text.NumberFormat.Style;
-
 public class StringMethods {
     
     public static void main(String args[]) {
