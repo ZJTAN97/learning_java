@@ -8,6 +8,16 @@ public class javaMethodParameters {
     static String returnSomething(String itemToReturn) {
         return itemToReturn;
     }
+
+    static String generationCheck(int age) {
+        if(age < 16) {
+            return "Child";
+        } else if (age < 21) {
+            return "Teenager";
+        } else {
+            return "Adult";
+        }
+    }
     
     public static void main(String[] args) {
         myMethod("Docker", 13);
@@ -15,5 +25,9 @@ public class javaMethodParameters {
 
         String itemRecieved = returnSomething("Item");
         System.out.println(itemRecieved);
+
+        String generation = generationCheck(18);
+        System.out.println("You are a " + generation);
+
     }
 }
