@@ -1,3 +1,4 @@
+package EncapsulationConcept;
 public class Person {
     private String name; // private = restricted access
 
