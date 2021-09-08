@@ -5,26 +5,19 @@ import java.util.ArrayList;
 
 public class Main {
 
-    public static String returnSplit(String sentence) {
-        ArrayList<String> parts = new ArrayList<>();
-        int len = sentence.length();
-
-        for(int i=0; i<len; i+=3) {
-            parts.add(sentence.substring(i, Math.min(len, i+3)));
+    public static String returnSplit(String s, int partLength) {
+        StringBuilder sb = new StringBuilder(s);
+        for (int i = partLength++; i < sb.length(); i += partLength){
+          sb.insert(i, " ");
         }
-
-        StringBuilder sb = new StringBuilder();
-        for(String s : parts) {
-            sb.append(s);
-            sb.append(' ');
-        }
-
         return sb.toString();
-
     }
 
     public static void main(String[] args) {
-        String answer = returnSplit("Testest");
+        String answer = returnSplit("Test", 2);
+        String solution = "Te st";
+        System.out.println(answer == solution);
         System.out.println(answer);
+        System.out.println(solution);
     }
 }
