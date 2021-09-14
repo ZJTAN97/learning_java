@@ -1,6 +1,9 @@
 import java.util.*;
 
 public class CollectionTutorial {
+    /*
+        Collections tutorial covers List, Iterator
+    */
     public static void main(String[] args) {
 
         String[] things = {"eggs", "lasers", "hats", "docker"};
@@ -36,6 +39,7 @@ public class CollectionTutorial {
 
         // loop through until the end of the list
         while(it.hasNext()) {
+            // if list2 has the item from list1, remove
             if(l2.contains(it.next()))
                 it.remove();
         }
