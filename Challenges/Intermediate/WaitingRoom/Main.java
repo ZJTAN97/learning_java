@@ -5,7 +5,8 @@ import java.util.*;
 public class Main {
     // https://www.codewars.com/kata/542f0c36d002f8cd8a0005e5/java
     public static void main(String[] args) {
-        System.out.println(lastChair(100));
+        lastChair(6);
+        // System.out.println(lastChair(10));
         // once you use it a few times, you realise
         // the answer is just n - 1
     }
@@ -15,7 +16,7 @@ public class Main {
         int index = -1;
         int maxSoFar = -1;
         for(int i=0; i < chairs.length; i++) {
-            if(!chairs[i]) {
+            if(!chairs[i]) { // if seat is not taken
                 int score = calcScore(chairs, i);
                 if (score > maxSoFar) {
                     index = i;
@@ -51,6 +52,7 @@ public class Main {
             rightScore ++;
           }
         }
+
         return (leftScore < rightScore) ? leftScore : rightScore;
     }
 
@@ -60,7 +62,8 @@ public class Main {
         int chair = 0;
         for (int i = 0; i < n; i++) {
             chair = getBeatSeat(chairs);
-            chairs[chair] = true;
+            chairs[chair] = true; // seat taken denoted by 'true'
+            // System.out.println(Arrays.toString(chairs));
         }
         return chair + 1;
     }
