@@ -12,11 +12,7 @@ public class AddAll {
         newList2.add("maplestory");
         newList2.add("docker");
 
-
         newList2.addAll(newList);
         System.out.println(newList2);
-
-
-
     }
 }
