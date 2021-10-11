@@ -25,9 +25,7 @@ class Node {
         key = item;
         left = right = null;
     }
-
 }
-
 
 class BinaryTree {
     // Root of Binary Tree
