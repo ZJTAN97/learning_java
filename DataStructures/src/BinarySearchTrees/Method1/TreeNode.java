@@ -13,8 +13,10 @@ public class TreeNode {
 	public TreeNode find(Integer data) {
 		if (this.data == data)
 			return this;
+		// if data lesser than current node, we go left side
 		if (data < this.data && leftChild != null)
 			return leftChild.find(data);
+		// if data more than the current node
 		if (rightChild != null)
 			return rightChild.find(data);
 		return null;
@@ -33,18 +35,7 @@ public class TreeNode {
 				this.leftChild.insert(data);
 		}
 	}
-	
-	public Integer largest() {
-		if (this.rightChild == null)
-			return this.data;
-		return this.rightChild.largest();
-	}
 
-	public Integer smallest() {
-		if (this.leftChild == null)
-			return this.data;
-		return this.leftChild.smallest();
-	}
 
     public Integer getData() {
         return data;
@@ -54,16 +45,10 @@ public class TreeNode {
 		return leftChild;
 	}
 
-	public void setLeftChild(TreeNode left) {
-		this.leftChild = left;
-	}
 
 	public TreeNode getRightChild() {
 		return rightChild;
 	}
 
-	public void setRightChild(TreeNode right) {
-		this.rightChild = right;
-	}
 
 }

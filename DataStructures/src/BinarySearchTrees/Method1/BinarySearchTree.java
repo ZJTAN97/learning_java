@@ -10,17 +10,7 @@ public class BinarySearchTree {
         return null;
     }
 
-    public Integer largest() {
-		if (this.root != null)
-			return root.largest();
-		return null;
-	}
 
-	public Integer smallest() {
-		if (this.root != null)
-			return root.smallest();
-		return null;
-	}
 
     public void insert(Integer data) {
 		if (root == null)
@@ -39,8 +29,6 @@ public class BinarySearchTree {
             tree.insert(i);
         }
 
-        System.out.println(tree.largest());
-        System.out.println(tree.smallest());
         
     }
 
