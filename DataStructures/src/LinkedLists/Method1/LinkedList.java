@@ -1,4 +1,4 @@
-package src.LinkedLists.Method1;
+package LinkedLists.Method1;
 
 public class LinkedList {
     private Node head;

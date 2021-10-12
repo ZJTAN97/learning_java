@@ -1,4 +1,4 @@
-package src.BinarySearchTrees.Method1;
+package BinarySearchTrees.Method1;
 
 public class BinarySearchTree {
     
@@ -40,8 +40,7 @@ public class BinarySearchTree {
         }
 
         System.out.println(tree.largest());
-        System.out.println(tree.find(580));
-
+        System.out.println(tree.smallest());
         
     }
 

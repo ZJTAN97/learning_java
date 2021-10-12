@@ -1,4 +1,4 @@
-package src.BinarySearchTrees.Method1;
+package BinarySearchTrees.Method1;
 
 public class TreeNode {
     private Integer data;

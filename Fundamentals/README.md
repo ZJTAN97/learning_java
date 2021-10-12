@@ -22,7 +22,4 @@ The workspace contains three main folders within `src`, where:
 - `classes`: Contains classes topic on W3Schools (will clean up in future.)
 - `intermediate`: Contains OOP concepts, constructors Methods, Java Collections 
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
 
