@@ -45,10 +45,15 @@ public class TreeNode {
 		return leftChild;
 	}
 
+	public void setLeftChild(TreeNode left) {
+		this.leftChild = left;
+	}
 
 	public TreeNode getRightChild() {
 		return rightChild;
 	}
 
-
+	public void setRightChild(TreeNode right) {
+		this.rightChild = right;
+	}
 }

@@ -8,8 +8,11 @@ public class Fibonacci {
         if(n <= 2) return 1;
         return recursiveMethod(n-1) + recursiveMethod(n-2);
     }
+    // O(2^n) time
+    // O(n) Space
 
-    // stopped at 7:14
+
+    // 23:50
     // https://www.youtube.com/watch?v=oBt53YbR9Kk
 
 
