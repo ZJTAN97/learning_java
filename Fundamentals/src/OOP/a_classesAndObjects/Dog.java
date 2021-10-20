@@ -1,4 +1,4 @@
-package OOP.a_classesAndObjects;
+package OOP.a_ClassesAndObjects;
 
 public class Dog {
     
@@ -36,9 +36,18 @@ public class Dog {
         return color;
     }
 
+    @Override
+    public String toString() {
+        return("Hi my name is "+ this.getName()+
+               ".\nMy breed,age and color are " +
+               this.getBreed()+"," + this.getAge()+
+               ","+ this.getColor());   
+    }
+
     public static void main(String[] args) {
         Dog xiaoGou = new Dog("Docker", "DevOps", 13, "blue");
         xiaoGou.getName();
+        System.out.println(xiaoGou.toString());
     }
 
 }
