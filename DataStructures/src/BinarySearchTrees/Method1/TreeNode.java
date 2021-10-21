@@ -4,6 +4,7 @@ public class TreeNode {
     private Integer data;
     private TreeNode leftChild;
     private TreeNode rightChild;
+	private boolean isDeleted = false;
 
     // constructor
     public TreeNode(Integer data) {
@@ -56,4 +57,36 @@ public class TreeNode {
 	public void setRightChild(TreeNode right) {
 		this.rightChild = right;
 	}
+
+	public void delete() {
+		this.isDeleted = true;
+	}
+
+	public boolean isDeleted() {
+		return isDeleted;
+	}
+
+	public Integer smallest() {
+		// recursively find the smallest value
+		if (this.leftChild == null) 
+			return this.data;
+		return this.leftChild.smallest();
+	}
+
+	public Integer largest() {
+		// recursively find the largest value
+		if (this.rightChild == null)
+			return this.data;
+		return this.rightChild.largest();
+	}
+
+	public void traverseInOrder() {
+		if (this.leftChild != null) 
+			this.leftChild.traverseInOrder();
+		System.out.print(this.data + " ");
+		if (this.rightChild != null)
+			this.rightChild.traverseInOrder();
+	}
+
+
 }

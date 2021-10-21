@@ -17,6 +17,26 @@ public class BinarySearchTree {
 			root.insert(data);
 	}
 
+    public Integer smallest() {
+        if (this.root != null)
+            return root.smallest();
+        return null;
+    }
+
+
+    public Integer largest() {
+        if (this.root != null)
+            return root.largest();
+        return null;
+    }
+
+    public void traverseInOrder() {
+        if (this.root != null) {
+            this.root.traverseInOrder();
+        }
+        System.out.println();
+    }
+
     private TreeNode getSuccessor(TreeNode node) {
         // private method to get successor for case 3 deletion
         TreeNode parentOfSuccessor = node;
@@ -34,6 +54,12 @@ public class BinarySearchTree {
 
         return successor;
     }
+
+    public void softDelete(Integer data) {
+        TreeNode toDel = find(data);
+        toDel.delete(); 
+    }
+
 
     public void delete(Integer data) {
         TreeNode current = this.root;
@@ -119,11 +145,6 @@ public class BinarySearchTree {
             successor.setLeftChild(current.getLeftChild());
         }
 
-
-
-
-
-
     }
 
 
@@ -136,8 +157,12 @@ public class BinarySearchTree {
             tree.insert(i);
         }
 
-        tree.delete(6);
+        // tree.delete(6);
 
+        System.out.println(tree.largest());
+        System.out.println(tree.smallest());
+
+        tree.traverseInOrder();
         
     }
 
