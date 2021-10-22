@@ -1,4 +1,4 @@
-package OOP.b_Methods;
+package oop.b_methods;
 
 
 class Main {

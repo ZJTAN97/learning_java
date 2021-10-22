@@ -1,4 +1,4 @@
-package OOP.a_ClassesAndObjects;
+package oop.a_classes_objects;
 
 public class Dog {
     
