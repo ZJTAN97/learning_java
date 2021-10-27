@@ -1,11 +1,12 @@
 public class RemoveLinkedListElement {
 
+    // Need to find out more about moving nodes
 
     static ListNode removeElements(ListNode head, int val) {
 
         ListNode dummy = new ListNode(0);
         dummy.next = head;
-        ListNode current = dummy;
+        ListNode current = dummy; // moving node.
 
 
         while(current.next != null) {
@@ -15,7 +16,7 @@ public class RemoveLinkedListElement {
                 current = current.next;
             }
             // printList(current);
-            printList(dummy);
+            printList(dummy.next);
             System.out.println("---");
         }
 

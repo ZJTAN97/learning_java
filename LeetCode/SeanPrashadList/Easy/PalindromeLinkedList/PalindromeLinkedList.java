@@ -3,6 +3,9 @@ import java.util.List;
 
 public class PalindromeLinkedList {
 
+    // This question is not officially solved!!
+    // come back to it.
+
     static ListNode reverse(ListNode head) {
         ListNode prev = null;
         while (head != null) {
