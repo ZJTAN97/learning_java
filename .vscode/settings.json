@@ -1,8 +1,7 @@
 {
     "java.project.sourcePaths": [
         "W3Schools/JavaClasses",
-        "Fundamentals/src/intermediate/Collections",
         "DataStructures",
-        "Fundamentals/src/intermediate/StacksUtil"
+        "Algorithms/src/BinarySearch"
     ]
 }

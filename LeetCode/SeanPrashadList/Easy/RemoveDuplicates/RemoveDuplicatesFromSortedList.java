@@ -3,40 +3,28 @@ package SeanPrashadList.Easy.RemoveDuplicates;
 
 public class RemoveDuplicatesFromSortedList {
 
-
-    // we are not done yet.
-    // need handle such a scenario 1, 1, 1
     static ListNode deleteDuplicates(ListNode head) {
 
-        if(head != null) {
-            ListNode slow = head;
-            ListNode fast = head.next;
-            
-            while(slow != null && fast != null) {
-    
-                if(slow.val == fast.val) {
-    
-                    if (fast.next != null) {
-                        fast = fast.next;
-                        slow.next = fast;
-                        slow = slow.next;
-                        fast = fast.next;
-                    } else {
-                        slow.next = null;
-                        slow = slow.next;
-                    }
-    
-                } else {
-                    slow = slow.next;
-                    fast = fast.next;
-                }
-            }
-            
-            printList(head);
+        // handle empty list
+        if (head == null || head.next == null) {
+            return head;
         }
 
-        return head;
+        ListNode curr = head, prev = head;
 
+        while(curr != null) {
+            if(prev.val == curr.val) {
+                // as long as its the same, will move pointer to next
+                curr = curr.next;
+            } else {
+                // slow pointer will get the next pointer which isnt a duplicate; as checked by the first condition
+                prev.next = curr;
+                prev = prev.next;
+            }
+        }
+        prev.next = curr;
+        printList(head);
+        return head;
     }
 
     static void printList(ListNode head) {
@@ -48,6 +36,7 @@ public class RemoveDuplicatesFromSortedList {
 
     public static void main(String[] args) {
 
+        // Test Case 1
         ListNode first = new ListNode(1);
         ListNode second = new ListNode(1);
         ListNode third = new ListNode(2);
@@ -61,6 +50,7 @@ public class RemoveDuplicatesFromSortedList {
         fourth.next = fifth;
 
 
+        // Test Case 2
         ListNode new1 = new ListNode(1);
         ListNode new2 = new ListNode(1);
         ListNode new3 = new ListNode(2);
@@ -69,9 +59,20 @@ public class RemoveDuplicatesFromSortedList {
         new2.next = new3;
 
 
+        // Test Case 3
+        ListNode test = new ListNode(1);
+        ListNode test2 = new ListNode(1);
+        ListNode test3 = new ListNode(1);
+
+        test.next = test2;
+        test2.next = test3;
+
+
         deleteDuplicates(first); // 1 2 3
         System.out.println("----");
         deleteDuplicates(new1); // 1 2
+        System.out.println("----");
+        deleteDuplicates(test); // 1
         
     }
 }

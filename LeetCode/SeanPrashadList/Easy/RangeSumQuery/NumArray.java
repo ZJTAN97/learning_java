@@ -28,7 +28,6 @@ public class NumArray {
         if(first == 0) {
             return nums[last];
         }
-        // 
         return nums[last] - nums[first - 1];
     }
 
