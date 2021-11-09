@@ -1,35 +1,37 @@
 package BreadthFirstSearch;
 
 import GraphRepresentation.*;
-import java.io.*;
 import java.util.*;
 
 public class BreadthFirstSearch {
 
-    static void BFS(int source, int nodes) {
+    static void BFS(ArrayList<ArrayList<Integer>> graph, int source) {
 
-        boolean visited[] = new boolean[nodes];
+        boolean visited[] = new boolean[graph.size()];
 
-        // create queue for BFS
         LinkedList<Integer> queue = new LinkedList<Integer>();
-
-        // Mark the current node as visited and enqueue it
-        visited[source] = true;
+        visited[source]= true;
         queue.add(source);
 
-        while (queue.size() != 0) {
-            // Dequeue a vertex from queue
-            source = queue.poll();
-            System.out.print(source + " ");
+        while(queue.size() != 0) {
+            int current = queue.poll(); // dequeue from the list taking the first element
+            System.out.println(current);
 
+            Iterator<Integer> i = graph.get(current).listIterator();
+            while(i.hasNext()) {
+                int n = i.next();
+                if(!visited[n]) {
+                    visited[n] = true;
+                    queue.add(n);
+                }
+            }
         }
-
     }
 
     public static void main(String[] args) {
 
-        // Creating graph with 5 vertices (nodes)
-        int nodes = 5;
+        // Creating graph with 4 vertices (nodes)
+        int nodes = 4;
         ArrayList<ArrayList<Integer>> adjacencyList = new ArrayList<ArrayList<Integer>>(nodes);
 
         for (int i=0; i < nodes; i++) {
@@ -41,7 +43,12 @@ public class BreadthFirstSearch {
         graph.addEdge(adjacencyList, 0, 1);
         graph.addEdge(adjacencyList, 0, 2);
         graph.addEdge(adjacencyList, 1, 2);
-        System.out.println(adjacencyList);
+        graph.addEdge(adjacencyList, 2, 0);
+        graph.addEdge(adjacencyList, 2, 3);
+        graph.addEdge(adjacencyList, 3, 3);
+
+        BFS(adjacencyList, 2);
+
         
     }
 }

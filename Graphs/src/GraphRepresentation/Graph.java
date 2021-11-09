@@ -6,6 +6,7 @@ public class Graph {
     // utility function to add edge in graph
     public void addEdge(ArrayList<ArrayList<Integer>> adj, int u, int v) {
         adj.get(u).add(v);
+        adj.get(v).add(u);
     }
 
     // utility function to print adjacency list
