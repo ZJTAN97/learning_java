@@ -17,12 +17,10 @@ public class BreadthFirstSearch {
             int current = queue.poll(); // dequeue from the list taking the first element
             System.out.println(current);
 
-            Iterator<Integer> i = graph.get(current).listIterator();
-            while(i.hasNext()) {
-                int n = i.next();
-                if(!visited[n]) {
-                    visited[n] = true;
-                    queue.add(n);
+            for(int i=0; i < graph.get(current).size(); i++) {
+                if(!visited[i]) {
+                    visited[i] = true;
+                    queue.add(i);
                 }
             }
         }
