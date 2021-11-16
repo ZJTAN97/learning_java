@@ -9,7 +9,7 @@ public class BreadthFirstSearch {
 
         boolean visited[] = new boolean[graph.size()];
 
-        LinkedList<Integer> queue = new LinkedList<Integer>();
+        Queue<Integer> queue = new LinkedList<Integer>();
         visited[source]= true;
         queue.add(source);
 
