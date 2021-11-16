@@ -12,6 +12,8 @@ Feel free to use these materials for your learning.
 The workspace contains the following Folders
 - `Algorithms`
 - `Data Structures`
+- `Dynamic Programming`
 - `Fundamentals`
+- `Graphs`
 - `LeetCode`
 
