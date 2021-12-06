@@ -1,3 +1,5 @@
+package Searching.BinarySearch;
+
 public class BinarySearch {
 
     public int binarySearch(int[] arr, int target) {

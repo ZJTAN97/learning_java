@@ -1,35 +1,37 @@
+package Sorting.SelectionSort;
+
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class SelectionSort {
-    public static void main(String[] args) {
-        int[] numArr = {6, 5, 4, 3 ,2 ,1};
-        int[] sortedArr = selectionSortMethod(numArr);
 
-        System.out.println(Arrays.toString(sortedArr));
-        
+    private static List<Integer> selectionSort(List<Integer> arr) {
+        List<Integer> newArr = new ArrayList<>(arr.size());
+
+        int size = arr.size();
+        for(int i=0; i<size; i++) {
+            int smallest = findSmallest(arr);
+            newArr.add(arr.get(smallest));
+            arr.remove(smallest);
+        }
+        return newArr;
     }
 
-    public static int[] selectionSortMethod(int[] numArr) {
-
-        int n = numArr.length;
-        int temp = 0;
-        
-        // One by one move boundary of unsorted subarray
-        for(int i=0; i < n-1; i++) {
-            int minIndex = i;
-            for(int j=i+1; j < n; j++) {
-                if(numArr[j] < numArr[minIndex]) {
-                    minIndex = j;
-                }
+    private static int findSmallest(List<Integer> arr) {
+        int smallest = arr.get(0);
+        int smallestIndex = 0;
+        for (int i=0; i < arr.size(); i++) {
+            if(arr.get(i) < smallest) {
+                smallest = arr.get(i);
+                smallestIndex = i;
             }
-
-            // Swap the found min element with the first element
-            temp = numArr[minIndex];
-            numArr[minIndex] = numArr[i];
-            numArr[i] = temp;
-            
         }
+        return smallestIndex;
+    }
 
-        return numArr;
+    public static void main(String[] args) {
+        List<Integer> arr = new ArrayList<>(Arrays.asList(5, 3, 6, 2, 10));
+        System.out.println(selectionSort(arr));
     }
 }
