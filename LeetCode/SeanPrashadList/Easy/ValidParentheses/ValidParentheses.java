@@ -12,6 +12,7 @@ public class ValidParentheses {
 
         for(int i=0; i < s.length(); i++) {
             char c = s.charAt(i);
+            System.out.println(stack);
             if(c == '(') stack.push(')');
             else if (c == '{') stack.push('}');
             else if (c == '[') stack.push(']');

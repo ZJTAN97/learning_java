@@ -1,6 +1,6 @@
+package SeanPrashadList.Easy.LinkedListCycle;
+
 public class LinkedListCycle {
-
-
 
     static boolean hasCycle(ListNode head) {
 
