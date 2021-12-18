@@ -1,6 +1,6 @@
 package SeanPrashadList.Easy.BinarySearch;
 
-public class BinarySearch {
+public class Solution {
 
     static int search(int[] nums, int target) {
 

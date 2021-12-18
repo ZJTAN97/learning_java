@@ -1,6 +1,6 @@
 package SeanPrashadList.Easy.MergeTwoSortedLists;
 
-public class MergeTwoSortedLists {
+public class Solution {
 
     static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         

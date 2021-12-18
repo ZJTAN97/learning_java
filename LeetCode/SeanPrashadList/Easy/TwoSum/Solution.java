@@ -1,9 +1,8 @@
 package SeanPrashadList.Easy.TwoSum;
-
 import java.util.*;
 
-public class TwoSum {
-
+public class Solution {
+    
     static int[] getTwoSum(int[] arr, int target) {
 
         Map<Integer, Integer> map = new HashMap<Integer, Integer>();
@@ -23,13 +22,8 @@ public class TwoSum {
         return return_arr;
 
     }
-
     public static void main(String[] args) {
         int[] nums = { 2, 7, 11, 15 };
-
-        getTwoSum(nums, 9);
-
         System.out.println(Arrays.toString(getTwoSum(nums, 9)));
-        
     }
 }
