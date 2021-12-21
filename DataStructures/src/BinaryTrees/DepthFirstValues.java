@@ -1,8 +1,6 @@
 package BinaryTrees;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 public class DepthFirstValues {
 
@@ -24,9 +22,22 @@ public class DepthFirstValues {
             if(current.right != null) stack.add(current.right);
 
         }   
-
         return result;
+    }
 
+
+    static List<Character> depthFirstRecursive(TreeNode root) {
+        List<Character> result = new ArrayList<Character>();
+        if (root == null) return result;
+        
+        List<Character> leftValues = depthFirstRecursive(root.left);
+        List<Character> rightValues = depthFirstRecursive(root.right);
+
+        result.addAll(Arrays.asList(root.val));
+        result.addAll(leftValues);
+        result.addAll(rightValues);
+    
+        return result;
     }
 
     public static void main(String[] args) {
@@ -44,6 +55,7 @@ public class DepthFirstValues {
         c.right = f;
 
         System.out.println(depthFirstTraversal(a));
+        System.out.println(depthFirstRecursive(a));
 
     }
 }
