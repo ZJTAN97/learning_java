@@ -2,11 +2,6 @@ package Sorting.BubbleSort;
 import java.util.Arrays;
 
 public class BubbleSort {
-    public static void main(String[] args) {
-        int[] numArr = {6, 5, 4, 3, 2, 1};
-        int[] sortedArr = bubbleSortMethod(numArr);
-        System.out.println(Arrays.toString(sortedArr));
-    }
 
     public static int[] bubbleSortMethod(int[] numArr) {
 
@@ -25,5 +20,9 @@ public class BubbleSort {
 
         return numArr;
     }
-
+    public static void main(String[] args) {
+        int[] numArr = {6, 5, 4, 3, 2, 1};
+        int[] sortedArr = bubbleSortMethod(numArr);
+        System.out.println(Arrays.toString(sortedArr));
+    }
 }
