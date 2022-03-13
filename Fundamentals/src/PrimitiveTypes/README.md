@@ -8,6 +8,9 @@
 5. Consider using a cache to accelerate operations by using it to brute-force small inputs.
 6. Be aware that commutativity and associativity can be used to perform operations in parallel and reorder operations.
 
+<br>
+<hr>
+
 
 ## 1. Java Integer
 - Is always in 32 bits
@@ -24,3 +27,27 @@
 <br>
 <hr>
 
+## 3. Difference between >> and >>>
+- `>>>` is unsigned-shift
+- `>>` is signed shift, extend the sign bit
+- `>>>` will always put a 0 in the left most bit, while >> will put a 1 or a 0 depending on what the sign of it is.
+
+<br>
+<hr>
+
+## 4. Trick to clearing lowest set bit
+e.g.
+7 --> 0111
+6 --> 0110
+4 --> 0100
+
+```
+
+x & ~(x-1)
+
+```
+
+<br>
+<hr>
+
+stopped at page 49

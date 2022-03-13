@@ -7,14 +7,24 @@ public class ComputingParityOfWord {
         while (x != 0) {
             System.out.println(x);
             result ^= 1;
-            x &= (x-1); // refer to guide below
+            x &= (x-1); // refer to guide below; Clearing of lowest set bit
         }
         
         return result;
     }
 
+    public static void extractLowestBit(int x) {
+        System.out.println(x & ~(x-1));
+    }
+
     public static void main(String[] args) {
+
         System.out.println(parity(7));
+        
+        System.out.println("---- Extract Lowest Set Bit Examples ----");
+        extractLowestBit(10); // 1 0 1 0 --> lowest set bit is 2^1 == 2
+        extractLowestBit(8); // 1 0 0 0 --> lowest set bit is 2^3 == 8 
+
     }
 }
 
