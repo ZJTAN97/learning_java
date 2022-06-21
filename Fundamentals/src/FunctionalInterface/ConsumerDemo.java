@@ -1,6 +1,10 @@
 package FunctionalInterface;
 
+import java.util.function.Consumer;
+
 public class ConsumerDemo {
-    // continue from 55:07
-    // https://www.youtube.com/watch?v=UfJ0lCH7FMM&list=PLaYhFOWdg5S_0UXz9gh6LCVrYfuSSNqtX&index=23&t=228s
+    public static void main(String[] args) {
+        Consumer<String> consumer = (String input) -> System.out.println(input);
+        consumer.accept("Hello World, This is Consumer in Lambda Expression");
+    }
 }
