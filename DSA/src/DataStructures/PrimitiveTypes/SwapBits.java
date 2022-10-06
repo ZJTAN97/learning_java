@@ -1,4 +1,4 @@
-package PrimitiveTypes;
+package DataStructures.PrimitiveTypes;
 
 /**
  * Problem Description
