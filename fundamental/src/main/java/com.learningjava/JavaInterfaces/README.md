@@ -17,6 +17,7 @@
 
 ### Default
 
+- default methods are implicitly public
 - The most common use of interface default methods is to incrementally provide additional functionality to a given type
   without breaking down the implementing classes.
 - In addition, we can use them to provide additional functionality around an existing abstract method:

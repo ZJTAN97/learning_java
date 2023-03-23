@@ -1,4 +1,4 @@
-package JavaInterfaces;
+package com.learningjava.JavaInterfaces;
 
 public class Car implements Vehicle {
 

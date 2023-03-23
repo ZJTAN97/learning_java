@@ -1,4 +1,4 @@
-package JavaInterfaces;
+package com.learningjava.JavaInterfaces;
 
 public class InterfacesExample {
 
@@ -6,6 +6,7 @@ public class InterfacesExample {
 
         Car car = new Car();
         System.out.println(car.turnAlarmOn());
+
 
     }
 
